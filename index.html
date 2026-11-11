@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101a38" />
+  <title>CampusOS — Institute Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">C</div><div><b>CampusOS</b><small>INSTITUTE SUITE</small></div></div>
+      <div class="workspace"><span class="workspace-icon">✦</span><div><b>Northstar Academy</b><small>Premium Workspace</small></div><span class="chevron">⌄</span></div>
+      <div class="nav-label">WORKSPACE</div>
+      <nav id="mainNav">
+        <button class="nav-item active" data-page="overview"><span>◫</span> Overview</button>
+        <button class="nav-item" data-page="students"><span>♙</span> Students <em>2.4k</em></button>
+        <button class="nav-item" data-page="faculty"><span>♧</span> Faculty</button>
+        <button class="nav-item" data-page="academics"><span>▤</span> Academics</button>
+        <button class="nav-item" data-page="attendance"><span>◷</span> Attendance</button>
+        <button class="nav-item" data-page="finance"><span>₹</span> Finance</button>
+        <button class="nav-item" data-page="hrms"><span>♧</span> HRMS</button>
+        <button class="nav-item" data-page="reports"><span>▥</span> Reports</button>
+      </nav>
+      <div class="nav-label tools-label">MANAGEMENT</div>
+      <nav>
+        <button class="nav-item" data-page="settings"><span>⚙</span> Settings</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><div class="help-icon">✧</div><b>Need a hand?</b><p>Explore the quick product tour and learn your way around.</p><button id="tourBtn">Start product tour <span>→</span></button></div>
+        <div class="profile-mini"><div class="avatar purple">KJ</div><div><b>Kanhiya Jha</b><small>Institute Director</small></div><span class="more">•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuBtn">☰</button>
+        <div class="crumb">Workspace <span>/</span> <b id="crumbTitle">Overview</b></div>
+        <div class="product-tabs" role="tablist" aria-label="Platform preview">
+          <button class="product-tab active" id="webTab" role="tab" aria-selected="true">▦ Web Dashboard</button>
+          <button class="product-tab" id="mobileTab" role="tab" aria-selected="false">▣ Mobile App</button>
+        </div>
+        <div class="top-actions">
+          <div class="search"><span>⌕</span><input id="globalSearch" placeholder="Search anything..." /><kbd>⌘ K</kbd></div>
+          <button class="icon-btn" aria-label="Help">?</button>
+          <button class="icon-btn notification" id="notificationBtn">♧<i></i></button>
+          <div class="avatar purple">KJ</div>
+          <select id="roleSelect" class="role-select" aria-label="Switch role">
+            <option>Director</option><option>Admin</option><option>Accounts</option><option>Faculty</option><option>HR Manager</option>
+          </select>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="welcome-row">
+          <div><div class="eyebrow"><span class="live-dot"></span> WEDNESDAY, 11 NOVEMBER 2026</div><h1 id="pageTitle">Good afternoon, Kanhiya <span class="wave">✦</span></h1><p class="subtitle" id="pageSubtitle">Here’s what’s happening across your institute today.</p></div>
+          <div class="welcome-actions"><button class="btn secondary" id="exportBtn">↓ <span>Export report</span></button><button class="btn primary" id="addBtn">＋ <span id="addLabel">Add student</span></button></div>
+        </div>
+
+        <div class="role-banner"><div class="role-symbol">✦</div><div><b id="roleHeading">Director overview</b><span id="roleDescription">A complete view of your institute’s performance and operations.</span></div><span class="role-chip" id="roleChip">DIRECTOR VIEW</span></div>
+
+        <div class="stats-grid" id="statsGrid">
+          <article class="stat-card"><div class="stat-top"><span>Total students</span><span class="stat-icon blue">♙</span></div><div class="stat-value" data-count="2486">2,486</div><div class="stat-foot"><span class="trend positive">↗ 12.8%</span><span>vs last month</span><div class="sparkline blue-line">▁▂▃▂▄▅▃▆▇</div></div></article>
+          <article class="stat-card"><div class="stat-top"><span>Fee collection</span><span class="stat-icon green">₹</span></div><div class="stat-value">₹42.8L</div><div class="stat-foot"><span class="trend positive">↗ 8.2%</span><span>vs last month</span><div class="sparkline green-line">▂▃▂▄▃▅▆▅▇</div></div></article>
+          <article class="stat-card"><div class="stat-top"><span>Today's attendance</span><span class="stat-icon violet">◷</span></div><div class="stat-value">94.6<span class="unit">%</span></div><div class="stat-foot"><span class="trend positive">↗ 2.4%</span><span>vs last week</span><div class="sparkline violet-line">▃▄▂▅▄▆▅▇▆</div></div></article>
+          <article class="stat-card"><div class="stat-top"><span>Faculty & staff</span><span class="stat-icon orange">♧</span></div><div class="stat-value">186</div><div class="stat-foot"><span class="trend positive">↗ 4.1%</span><span>vs last month</span><div class="sparkline orange-line">▁▂▃▃▄▅▄▆▇</div></div></article>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="panel revenue-panel">
+            <div class="panel-head"><div><h3>Institute performance</h3><p>Track your key metrics over time</p></div><select class="filter-select" id="periodSelect"><option>Last 7 days</option><option>Last 30 days</option><option>Last 90 days</option></select></div>
+            <div class="chart-legend"><span><i class="legend-dot indigo"></i> Fee collection</span><span><i class="legend-dot mint"></i> Admissions</span></div>
+            <div class="chart-wrap"><div class="y-labels"><span>50L</span><span>40L</span><span>30L</span><span>20L</span><span>10L</span><span>0</span></div><div class="chart" id="performanceChart">
+              <div class="grid-lines"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <svg viewBox="0 0 700 220" preserveAspectRatio="none" role="img" aria-label="Performance line chart"><defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#6558e8" stop-opacity=".22"/><stop offset="100%" stop-color="#6558e8" stop-opacity="0"/></linearGradient></defs><path class="area-path" d="M0 170 C45 150 55 155 90 135 S145 145 180 110 S235 125 270 95 S330 115 360 82 S420 90 450 65 S515 82 540 50 S610 72 640 35 S675 45 700 18 L700 220 L0 220Z"/><path class="line-path" d="M0 170 C45 150 55 155 90 135 S145 145 180 110 S235 125 270 95 S330 115 360 82 S420 90 450 65 S515 82 540 50 S610 72 640 35 S675 45 700 18"/><path class="second-path" d="M0 195 C50 185 55 180 90 185 S145 160 180 175 S235 165 270 150 S330 160 360 145 S420 150 450 135 S515 145 540 120 S610 130 640 110 S675 115 700 95"/></svg>
+              <div class="x-labels"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+            </div></div>
+          </article>
+          <article class="panel attendance-panel">
+            <div class="panel-head"><div><h3>Attendance overview</h3><p>Today's student attendance</p></div><button class="dots">•••</button></div>
+            <div class="donut-area"><div class="donut"><div class="donut-center"><b>94.6%</b><small>Present today</small></div></div></div>
+            <div class="attendance-legend"><div><i class="present"></i><span>Present</span><b>2,352</b></div><div><i class="absent"></i><span>Absent</span><b>108</b></div><div><i class="leave"></i><span>On leave</span><b>26</b></div></div>
+          </article>
+        </div>
+
+        <div class="lower-grid">
+          <article class="panel table-panel">
+            <div class="panel-head"><div><h3>Recent admissions</h3><p>Latest students enrolled in your institute</p></div><button class="text-btn" data-page-link="students">View all <span>→</span></button></div>
+            <div class="table-scroll"><table><thead><tr><th>STUDENT</th><th>CLASS</th><th>ADMISSION DATE</th><th>STATUS</th></tr></thead><tbody id="admissionRows">
+              <tr><td><div class="person"><div class="avatar peach">AS</div><div><b>Aarav Sharma</b><small>STU-2026-0841</small></div></div></td><td>Grade 8 - A</td><td>10 Nov, 2026</td><td><span class="status active">Active</span></td></tr>
+              <tr><td><div class="person"><div class="avatar blue-bg">SR</div><div><b>Siya Reddy</b><small>STU-2026-0840</small></div></div></td><td>Grade 6 - B</td><td>10 Nov, 2026</td><td><span class="status active">Active</span></td></tr>
+              <tr><td><div class="person"><div class="avatar mint-bg">VK</div><div><b>Vivaan Kapoor</b><small>STU-2026-0839</small></div></div></td><td>Grade 10 - A</td><td>09 Nov, 2026</td><td><span class="status pending">Pending</span></td></tr>
+              <tr><td><div class="person"><div class="avatar lilac-bg">AN</div><div><b>Anaya Nair</b><small>STU-2026-0838</small></div></div></td><td>Grade 5 - C</td><td>08 Nov, 2026</td><td><span class="status active">Active</span></td></tr>
+            </tbody></table></div>
+          </article>
+          <article class="panel activity-panel">
+            <div class="panel-head"><div><h3>Recent activity</h3><p>What's happening right now</p></div><button class="dots">•••</button></div>
+            <div class="activity-list">
+              <div class="activity"><div class="activity-icon violet">₹</div><div><b>Fee payment received</b><p>₹24,500 from Rohan Mehta</p><small>10 minutes ago</small></div></div>
+              <div class="activity"><div class="activity-icon blue">♙</div><div><b>New admission completed</b><p>Aarav Sharma · Grade 8</p><small>32 minutes ago</small></div></div>
+              <div class="activity"><div class="activity-icon orange">◷</div><div><b>Attendance submitted</b><p>Grade 9 - Section A</p><small>1 hour ago</small></div></div>
+              <div class="activity"><div class="activity-icon green">✓</div><div><b>Leave request approved</b><p>Priya Singh · Faculty</p><small>2 hours ago</small></div></div>
+            </div>
+          </article>
+        </div>
+        <footer>© 2026 CampusOS <span>Made for better learning experiences.</span><span class="footer-status"><i></i> All systems operational</span></footer>
+      </section>
+
+      <section class="mobile-app-view" id="mobileAppView">
+        <div class="mobile-view-heading">
+          <div><div class="eyebrow"><span class="live-dot"></span> LIVE INTERACTIVE PREVIEW</div><h1>Student & Parent App</h1><p>Tap the app buttons and bottom navigation to explore the complete mobile journey.</p></div>
+          <div class="mobile-view-controls"><span>Preview as</span><button class="persona-btn active" data-persona="student">Student</button><button class="persona-btn" data-persona="parent">Parent</button></div>
+        </div>
+        <div class="app-preview-layout">
+          <div class="app-device">
+            <div class="device-top"><span>9:41</span><span>●●● ▰</span></div>
+            <div class="app-screen" id="fullAppScreen">
+              <div class="app-header"><div><small id="appGreeting">GOOD MORNING 👋</small><h2 id="appUserName">Hi, Aarav!</h2><p id="appUserMeta">Grade 8 · Section A</p></div><div class="app-avatar" id="appAvatar">AS</div></div>
+              <div id="appScreenContent"></div>
+            </div>
+            <div class="app-bottom-nav" id="appBottomNav">
+              <button class="active" data-app-page="Home"><span>⌂</span>Home</button>
+              <button data-app-page="Attendance"><span>◷</span>Attendance</button>
+              <button data-app-page="Academics"><span>▤</span>Academics</button>
+              <button data-app-page="Fees"><span>₹</span>Fees</button>
+              <button data-app-page="Profile"><span>☻</span>Profile</button>
+            </div>
+            <div class="device-home-indicator"></div>
+          </div>
+          <aside class="app-flow-guide">
+            <div class="guide-kicker">EXPLORE THE APP</div><h3>Every tap opens a real demo screen.</h3>
+            <p>Use the phone preview or these shortcuts to walk through the student and parent experience.</p>
+            <div class="guide-shortcuts">
+              <button data-app-shortcut="Timetable"><span>▦</span><div><b>Class timetable</b><small>Daily schedule and teacher details</small></div><i>→</i></button>
+              <button data-app-shortcut="Results"><span>▤</span><div><b>Exam results</b><small>Subject-wise scores and grades</small></div><i>→</i></button>
+              <button data-app-shortcut="Materials"><span>▧</span><div><b>Study materials</b><small>Notes, PDFs and homework</small></div><i>→</i></button>
+              <button data-app-shortcut="Messages"><span>✉</span><div><b>Teacher communication</b><small>Announcements and messages</small></div><i>→</i></button>
+              <button data-app-shortcut="Payments"><span>₹</span><div><b>Payment history</b><small>Invoices and fee receipts</small></div><i>→</i></button>
+            </div>
+            <div class="guide-tip"><b>Demo credentials</b><span>Student: Aarav Sharma · STU-2026-0841</span><span>Parent: Sunita Sharma · PRT-2026-0218</span></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="mobile-preview">
+    <div class="phone-frame">
+      <div class="phone-status"><span>9:41</span><span>●●●  ▰</span></div>
+      <div class="phone-app">
+        <div class="mobile-head"><div><small>GOOD MORNING 👋</small><h2>Hi, Aarav!</h2><p>Grade 8 · Section A</p></div><div class="avatar purple">AS</div></div>
+        <div class="student-card"><div><small>OVERALL ATTENDANCE</small><strong>94.6%</strong><span>You're doing great! ↗</span></div><div class="mini-ring">94</div></div>
+        <div class="mobile-section-title"><b>Today's classes</b><a href="#">See timetable</a></div>
+        <div class="class-card"><div class="class-time">09:00<br><small>AM</small></div><div class="class-color violet-bg"></div><div><b>Mathematics</b><small>Room 204 · Mrs. Sharma</small></div><span class="class-now">NOW</span></div>
+        <div class="class-card"><div class="class-time">10:00<br><small>AM</small></div><div class="class-color blue-bg"></div><div><b>Science</b><small>Lab 02 · Mr. Verma</small></div></div>
+        <div class="mobile-section-title"><b>Quick access</b><a href="#">View all</a></div>
+        <div class="quick-grid"><div><i>◷</i><b>Attendance</b></div><div><i>▤</i><b>Results</b></div><div><i>₹</i><b>Fees</b></div><div><i>▣</i><b>Materials</b></div></div>
+        <div class="mobile-section-title"><b>Upcoming</b><a href="#">Calendar</a></div>
+        <div class="upcoming"><div class="date-box"><b>18</b><small>NOV</small></div><div><b>Mathematics Unit Test</b><small>Wednesday · 10:00 AM</small></div><span>›</span></div>
+        <div class="bottom-nav"><span class="selected">⌂<small>Home</small></span><span>◷<small>Attendance</small></span><span>▤<small>Academics</small></span><span>₹<small>Fees</small></span><span>☻<small>Profile</small></span></div>
+      </div>
+    </div>
+    <div class="mobile-caption"><span class="live-dot"></span> STUDENT APP PREVIEW <span>·</span> 390 × 844</div>
+  </div>
+
+  <div class="toast" id="toast"><span>✓</span><p id="toastText">Action completed successfully.</p></div>
+  <div class="modal-backdrop" id="modalBackdrop"><div class="modal"><button class="modal-close" id="modalClose">×</button><div class="modal-icon">＋</div><h2 id="modalTitle">Add new student</h2><p id="modalDesc">Enter the student details to create a new record.</p><form id="quickForm"><label>Full name<input required placeholder="e.g. Ananya Sharma"></label><div class="form-row"><label>Class<select><option>Grade 8 - A</option><option>Grade 9 - B</option><option>Grade 10 - A</option><option>Grade 6 - C</option></select></label><label>Admission status<select><option>Active</option><option>Pending</option></select></label></div><label>Parent email<input type="email" placeholder="parent@example.com"></label><button class="btn primary full" type="submit">Create record <span>→</span></button></form></div></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
